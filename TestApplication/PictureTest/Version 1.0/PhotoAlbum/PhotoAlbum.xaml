@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="PhotoAlbum.PhotoAlbum"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="600" Height="600">
+    <Canvas x:Name="LayoutRoot" Background="#FF000000">
+        
+    </Canvas>
+</UserControl>

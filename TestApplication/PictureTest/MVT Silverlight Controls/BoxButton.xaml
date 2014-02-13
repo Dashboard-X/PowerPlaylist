@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="MVT.BoxButton"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="30" Height="30">
+    <Canvas x:Name="LayoutRoot" Background="#00FFFFFF">
+        <Canvas.Resources>
+            <Storyboard x:Name="st_leave">
+                <ColorAnimationUsingKeyFrames Storyboard.TargetName="ellipse1" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" BeginTime="00:00:00">
+                    <SplineColorKeyFrame KeyTime="00:00:00" Value="#FF1428A7"/>
+                    <SplineColorKeyFrame KeyTime="00:00:00.3000000" Value="#991428A7">
+                        <SplineColorKeyFrame.KeySpline>
+                            <KeySpline ControlPoint1="0,0" ControlPoint2="1,0"/>
+                        </SplineColorKeyFrame.KeySpline>
+                    </SplineColorKeyFrame>
+                </ColorAnimationUsingKeyFrames>
+                <ColorAnimationUsingKeyFrames Storyboard.TargetName="ellipse1" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" BeginTime="00:00:00">
+                    <SplineColorKeyFrame KeyTime="00:00:00" Value="#FF1A2A8E"/>
+                    <SplineColorKeyFrame KeyTime="00:00:00.3000000" Value="#191A2A8E">
+                        <SplineColorKeyFrame.KeySpline>
+                            <KeySpline ControlPoint1="0,0" ControlPoint2="1,0"/>
+                        </SplineColorKeyFrame.KeySpline>
+                    </SplineColorKeyFrame>
+                </ColorAnimationUsingKeyFrames>
+            </Storyboard>
+            
+            <Storyboard x:Name="st_enter">
+                <ColorAnimationUsingKeyFrames Storyboard.TargetName="ellipse1" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" BeginTime="00:00:00">
+                    <SplineColorKeyFrame KeyTime="00:00:00" Value="#991428A7"/>
+                    <SplineColorKeyFrame KeyTime="00:00:00.3000000" Value="#FF1428A7">
+                        <SplineColorKeyFrame.KeySpline>
+                            <KeySpline ControlPoint1="0,0" ControlPoint2="1,0"/>
+                        </SplineColorKeyFrame.KeySpline>
+                    </SplineColorKeyFrame>
+                </ColorAnimationUsingKeyFrames>
+                <ColorAnimationUsingKeyFrames Storyboard.TargetName="ellipse1" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" BeginTime="00:00:00">
+                    <SplineColorKeyFrame KeyTime="00:00:00" Value="#191A2A8E"/>
+                    <SplineColorKeyFrame KeyTime="00:00:00.3000000" Value="#FF1A2A8E">
+                        <SplineColorKeyFrame.KeySpline>
+                            <KeySpline ControlPoint1="0,0" ControlPoint2="1,0"/>
+                        </SplineColorKeyFrame.KeySpline>
+                    </SplineColorKeyFrame>
+                </ColorAnimationUsingKeyFrames>
+            </Storyboard>
+
+            <Storyboard x:Name="st_click">
+                <ColorAnimationUsingKeyFrames Storyboard.TargetName="ellipse1" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" BeginTime="00:00:00">
+                    <SplineColorKeyFrame KeyTime="00:00:00" Value="#FF1428A7"/>
+                    <SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF5C72FF"/>
+                    <SplineColorKeyFrame KeyTime="00:00:00.2000000" Value="#FF1428A7"/>
+                </ColorAnimationUsingKeyFrames>
+                <ColorAnimationUsingKeyFrames Storyboard.TargetName="ellipse1" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" BeginTime="00:00:00">
+                    <SplineColorKeyFrame KeyTime="00:00:00" Value="#FF1A2A8E"/>
+                    <SplineColorKeyFrame KeyTime="00:00:00.1000000" Value="#FF5C72FF"/>
+                    <SplineColorKeyFrame KeyTime="00:00:00.2000000" Value="#FF1A2A8E">
+                        <SplineColorKeyFrame.KeySpline>
+                            <KeySpline ControlPoint1="0,1" ControlPoint2="1,1"/>
+                        </SplineColorKeyFrame.KeySpline>
+                    </SplineColorKeyFrame>
+                </ColorAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ellipse1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" BeginTime="00:00:00">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1.1"/>
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1">
+                        <SplineDoubleKeyFrame.KeySpline>
+                            <KeySpline ControlPoint1="0,1" ControlPoint2="1,1"/>
+                        </SplineDoubleKeyFrame.KeySpline>
+                    </SplineDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ellipse1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" BeginTime="00:00:00">
+                    <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1.1"/>
+                    <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1">
+                        <SplineDoubleKeyFrame.KeySpline>
+                            <KeySpline ControlPoint1="0,1" ControlPoint2="1,1"/>
+                        </SplineDoubleKeyFrame.KeySpline>
+                    </SplineDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+        </Canvas.Resources>
+        
+            <Ellipse Height="30" Width="30" Stroke="#FF000000" StrokeThickness="0" x:Name="ellipse1" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#991428A7" Offset="0.556"/>
+                        <GradientStop Color="#00000000" Offset="1"/>
+                        <GradientStop Color="#191A2A8E" Offset="0.711"/>
+                        <GradientStop Color="#1916289B" Offset="0"/>
+                        <GradientStop Color="#001428A1" Offset="0.47"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+    </Canvas>
+</UserControl>

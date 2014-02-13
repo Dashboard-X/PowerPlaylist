@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="MVT.ProgressControl"
+    xmlns="http://schemas.microsoft.com/client/2007" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    Width="100" Height="100">
+    
+    <UserControl.Resources>
+        <Storyboard x:Name="animation" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" BeginTime="00:00:00">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.4" Value="360"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ellipse_Copy" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" BeginTime="00:00:00">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="360"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    
+    <Canvas Height="100" HorizontalAlignment="Left" Margin="176,105,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5" x:Name="canvas">
+        <Canvas.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="360"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Canvas.RenderTransform>
+        <Ellipse Height="100" x:Name="ellipse" Width="100" RenderTransformOrigin="0.5,0.5" Stroke="#FF000000" Opacity="1" StrokeThickness="0">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop x:Name="blanc1" Color="#00000000"/>
+                    <GradientStop x:Name="blanc2" Color="#002644AF" Offset="0.8"/>
+                    <GradientStop x:Name="blanc3" Color="#00000000" Offset="0.6"/>
+                    <GradientStop x:Name="rad1" Color="#FF2644AF" Offset="0.655"/>
+                    <GradientStop x:Name="rad2" Color="#DE213B98" Offset="0.668"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#00FFFFFF" Offset="0.772"/>
+                    <GradientStop Color="#00858585" Offset="0.612"/>
+                    <GradientStop Color="#00BBBBBB" Offset="0.233"/>
+                    <GradientStop Color="#FF000000" Offset="0.366"/>
+                    <GradientStop Offset="0.522"/>
+                </LinearGradientBrush>
+            </Ellipse.OpacityMask>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse Height="100" x:Name="ellipse_Copy" Width="100" RenderTransformOrigin="0.5,0.5" Stroke="#FF000000" StrokeThickness="0">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop x:Name="blanc4" Color="#00000000"/>
+                    <GradientStop x:Name="blanc5" Color="#002644AF" Offset="0.9"/>
+                    <GradientStop x:Name="blanc6" Color="#00000000" Offset="0.5"/>
+                    <GradientStop x:Name="rad3" Color="#FF2644AF" Offset="0.655"/>
+                    <GradientStop x:Name="rad4" Color="#DE213B98" Offset="0.668"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF000000" Offset="0.134"/>
+                    <GradientStop Color="#00FFFFFF" Offset="0.806"/>
+                    <GradientStop Color="#00858585" Offset="0.194"/>
+                    <GradientStop Color="#FF000000" Offset="0"/>
+                    <GradientStop Color="#FF000000" Offset="1"/>
+                    <GradientStop Color="#FF000000" Offset="0.888"/>
+                </LinearGradientBrush>
+            </Ellipse.OpacityMask>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <TextBlock x:Name="txt" />
+    </Canvas>
+</UserControl>

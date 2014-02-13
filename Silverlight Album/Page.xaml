@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Silverlight_Album.Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:simplehor="clr-namespace:PhotoAlbum;assembly=SimpleAlbum"
+    xmlns:grid="clr-namespace:GridAlbum;assembly=GridAlbum"
+    Width="500" Height="500">
+    <Grid x:Name="LayoutRoot" Background="White" ShowGridLines="True" >     
+        
+        <simplehor:SimpleAlbumHorizontal Height="500" Width="500" UriDataSource="http://localhost:2222/lists/list01.txt">
+            <!--<simplehor:SimpleAlbumHorizontal.Images>               
+                <BitmapImage UriSource="http://localhost:2222/Images/a.JPG" />
+                <BitmapImage UriSource="http://localhost:2222/Images/b.JPG" />
+                <BitmapImage UriSource="http://localhost:2222/Images/c.JPG" />
+                <BitmapImage UriSource="http://localhost:2222/Images/d.JPG" />
+                <BitmapImage UriSource="http://localhost:2222/Images/e.JPG" />
+                <BitmapImage UriSource="http://localhost:2222/Images/f.JPG" />
+                <BitmapImage UriSource="http://localhost:2222/Images/g.JPG" />
+            </simplehor:SimpleAlbumHorizontal.Images>-->
+        </simplehor:SimpleAlbumHorizontal>
+        
+        <!--<grid:GridAlbum Height="300" Width="300">
+            <grid:GridAlbum.Images>
+                <BitmapImage UriSource="http://www.meirhuber.de/Projects/sl/PhotoAlbum/images02/a.JPG" />
+                <BitmapImage UriSource="http://www.meirhuber.de/Projects/sl/PhotoAlbum/images02/b.JPG" />
+                <BitmapImage UriSource="http://www.meirhuber.de/Projects/sl/PhotoAlbum/images02/c.JPG" />
+                <BitmapImage UriSource="http://www.meirhuber.de/Projects/sl/PhotoAlbum/images02/d.JPG" />
+                <BitmapImage UriSource="http://www.meirhuber.de/Projects/sl/PhotoAlbum/images02/e.JPG" />
+                <BitmapImage UriSource="http://www.meirhuber.de/Projects/sl/PhotoAlbum/images02/f.JPG" />
+                <BitmapImage UriSource="http://www.meirhuber.de/Projects/sl/PhotoAlbum/images02/g.JPG" />
+                <BitmapImage UriSource="http://www.meirhuber.de/Projects/sl/PhotoAlbum/images02/h.JPG" />
+            </grid:GridAlbum.Images>
+        </grid:GridAlbum>-->
+        
+    </Grid>
+</UserControl>
